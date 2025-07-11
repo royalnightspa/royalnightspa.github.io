@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Night Spa | Premium 24-Hour Spa Services in Pune</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+   <style>
+    :root {
+        --primary: #8B4513; /* Royal Brown */
+        --secondary: #D4AF37; /* Gold */
+        --accent: #C19A6B; /* Light Brown */
+        --light: #F5F5DC; /* Beige */
+        --dark: #2F4F4F; /* Dark Slate Gray */
+        --text: #555555; /* Dark Gray */
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text);
+        overflow-x: hidden;
+        background-color: var(--light);
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        color: #fbffff;
+    }
+    
+    /* Navigation */
+    .navbar {
+        background-color: rgba(245, 245, 220, 0.95);
+        box-shadow: var(--shadow);
+        padding: 15px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+        padding: 10px 0;
+        background-color: rgba(245, 245, 220, 0.98) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--primary) !important;
+    }
+    
+    .nav-link {
+        color: var(--dark) !important;
+        font-weight: 500;
+        margin: 0 10px;
+        position: relative;
+        padding: 8px 12px !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+    
+    .navbar-toggler {
+        border-color: var(--dark) !important;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2847, 79, 79, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: 100vh;
+        min-height: 700px;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('spa1.jpeg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding-top: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        animation: fadeIn 1s ease 0.3s forwards;
+        opacity: 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    .btn-primary {
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+        color: var(--dark);
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 50px;
+        animation: fadeIn 1s ease 0.6s forwards;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        background-color: transparent;
+        border-color: white;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    /* Rating Badge */
+    .rating-badge {
+        background-color: white;
+        color: var(--primary);
+        padding: 8px 15px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        margin-top: 20px;
+        animation: fadeIn 1s ease 0.9s forwards;
+        opacity: 0;
+    }
+    
+    .rating-badge i {
+        color: #FFD700;
+        margin-right: 5px;
+    }
+    
+    /* Services Section */
+    .services {
+        padding: 100px 0;
+        background-color: white;
+    }
+    
+    .section-title {
+        position: relative;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    
+    .section-title h2 {
+        font-size: 2.8rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+    
+    .section-title p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--text);
+    }
+    
+    .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--secondary);
+    }
+    
+    .service-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.4s ease;
+        margin-bottom: 30px;
+        height: 100%;
+        background-color: white;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+    
+    .service-card img {
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .service-card:hover img {
+        transform: scale(1.05);
+    }
+    
+    .service-card .card-body {
+        padding: 25px;
+    }
+    
+    .service-card .card-title {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .service-card .card-text {
+        color: var(--text);
+        margin-bottom: 20px;
+    }
+    
+    .service-link {
+        color: var(--secondary);
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+    
+    .service-link:hover {
+        color: var(--primary);
+        transform: translateX(5px);
+    }
+    
+    .service-link i {
+        margin-left: 5px;
+        transition: all 0.3s ease;
+    }
+    
+    /* About Section */
+    .about-section {
+        padding: 100px 0;
+        background-color: var(--light);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+        opacity: 0.1;
+        z-index: 0;
+    }
+    
+    .about-content {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .about-img {
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        transition: transform 0.5s ease;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .about-img:hover {
+        transform: scale(1.03);
+    }
+    
+    .about-text h2 {
+        color: var(--primary);
+        margin-bottom: 25px;
+    }
+    
+    .about-text p {
+        margin-bottom: 20px;
+    }
+    
+    .signature {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        color: var(--secondary);
+        margin-top: 20px;
+        font-weight: 500;
+    }
+    
+    /* Features Section */
+    .features {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--primary), #6B4423);
+        color: white;
+    }
+    
+    .features .section-title h2 {
+        color: white;
+    }
+    
+    .features .section-title::after {
+        background: var(--secondary);
+    }
+    
+    .feature-box {
+        text-align: center;
+        padding: 40px 25px;
+        border-radius: 15px;
+        background: rgba(255,255,255,0.1);
+        margin-bottom: 30px;
+        height: 100%;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .feature-box:hover {
+        transform: translateY(-10px);
+        background: rgba(255,255,255,0.15);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    
+    .feature-box i {
+        font-size: 2.8rem;
+        color: var(--secondary);
+        margin-bottom: 25px;
+    }
+    
+    .feature-box h4 {
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: white;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+        padding: 100px 0;
+        background-color: white;
+    }
+    
+    .testimonial-card {
+        background-color: var(--light);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .testimonial-card::before {
+        content: """;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 4rem;
+        color: rgba(139, 69, 19, 0.1);
+        font-family: Georgia, serif;
+        line-height: 1;
+    }
+    
+    .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+    }
+    
+    .testimonial-author img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    
+    .author-info h5 {
+        margin-bottom: 0;
+        color: var(--primary);
+    }
+    
+    .author-info p {
+        font-size: 0.9rem;
+        color: var(--text);
+        opacity: 0.8;
+        margin-bottom: 0;
+    }
+    
+    .stars {
+        color: #FFD700;
+        margin-bottom: 15px;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+        padding: 100px 0;
+        background-color: var(--light);
+    }
+    
+    .contact-info {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        height: 100%;
+    }
+    
+    .contact-info h3 {
+        color: var(--primary);
+        margin-bottom: 25px;
+    }
+    
+    .contact-item {
+        display: flex;
+        margin-bottom: 25px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(139, 69, 19, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+        color: var(--primary);
+        font-size: 1.2rem;
+    }
+    
+    .contact-text h5 {
+        margin-bottom: 5px;
+        color: var(--dark);
+    }
+    
+    .contact-text a {
+        color: var(--text);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .contact-text a:hover {
+        color: var(--primary);
+    }
+    
+    .contact-form {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+    }
+    
+    .form-control {
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+        border-color: var(--primary);
+    }
+    
+    textarea.form-control {
+        min-height: 150px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .submit-btn:hover {
+        background: var(--secondary);
+        transform: translateY(-2px);
+    }
+    
+    /* Map */
+    .map-container {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        margin-top: 40px;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 60px 0 30px;
+    }
+    
+    .footer-logo {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    
+    .footer-about p {
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
+    
+    .footer-links h4 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .footer-links ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+        color: var(--secondary);
+        padding-left: 5px;
+    }
+    
+    .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        background-color: var(--secondary);
+        color: var(--dark);
+        transform: translateY(-3px);
+    }
+    
+    .copyright {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 30px;
+        margin-top: 50px;
+        text-align: center;
+        opacity: 0.7;
+        font-size: 0.9rem;
+    }
+    
+    /* WhatsApp Float */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float:hover {
+        color: #FFF;
+        background-color: #128C7E;
+        transform: scale(1.1);
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .hero h1 {
+            font-size: 3rem;
+        }
+        
+        .about-img {
+            margin-bottom: 40px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .hero {
+            padding: 100px 0;
+            height: auto;
+            min-height: auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+        }
+        
+        .service-card img {
+            height: 200px;
+        }
+        
+        .contact-item {
+            flex-direction: column;
+        }
+        
+        .contact-icon {
+            margin-bottom: 15px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+        }
+        
+        .feature-box {
+            padding: 30px 20px;
+        }
+        
+        .contact-info,
+        .contact-form {
+            padding: 25px;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/916361295046" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Royal Night Spa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Royal Relaxation Awaits</h1>
+            <p>Experience regal pampering at Royal Night Spa, Pune's luxurious 24-hour wellness retreat. Our royal therapists provide bespoke treatments to rejuvenate your mind, body, and spirit.</p>
+            <a href="#contact" class="btn btn-primary">Book Your Royal Treatment</a>
+            <div class="rating-badge">
+                <i class="fas fa-star"></i> 5.0 (Google Reviews)
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Royal Treatments</h2>
+                <p>Discover our exclusive range of premium therapies designed for ultimate relaxation and rejuvenation.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <img src="couple.jpeg" class="card-img-top" alt="Royal Couples Massage">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Couples Massage</h5>
+                            <p class="card-text">Experience the ultimate bonding with our signature couples massage in our luxurious private suite, complete with aromatherapy and candlelight.</p>
+                            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <img src="2.jpeg" class="card-img-top" alt="Royal Therapeutic Massage">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Therapeutic Massage</h5>
+                            <p class="card-text">Our specialized royal massage techniques target deep muscle tension, relieve chronic pain, and promote complete wellness.</p>
+                            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <img src="3.jpeg" class="card-img-top" alt="Royal Spa Packages">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Spa Packages</h5>
+                            <p class="card-text">Indulge in our curated royal spa journeys combining multiple premium treatments for complete transformation.</p>
+                            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <img src="4.jpeg" class="card-img-top" alt="Royal Female Treatments">
+                        <div class="card-body">
+                            <h5 class="card-title">Royal Female Treatments</h5>
+                            <p class="card-text">Exclusive treatments designed for women by our expert female therapists in a serene, private environment.</p>
+                            <a href="#contact" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <h2>About Royal Night Spa</h2>
+                        <p>Welcome to Royal Night Spa, where we bring royal treatment to Pune's wellness scene. Established with a vision to provide exceptional spa experiences at any hour, we combine ancient royal wellness traditions with modern therapies.</p>
+                        <p>Our team of royal-certified therapists are trained in various massage modalities from around the world and are committed to tailoring each treatment to your specific needs. We use only the finest royal-grade products and maintain the highest standards of hygiene.</p>
+                        <p>At Royal Night Spa, we believe luxury wellness should be accessible whenever you need it. Our palatial environment is designed to transport you to a world of relaxation, available day or night.</p>
+                        <div class="signature">- The Royal Night Spa Team</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="4.jpeg" alt="Royal Spa Interior" class="img-fluid about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Royal Difference</h2>
+                <p>What sets our royal spa experience apart from the rest</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-spa"></i>
+                        <h4>Royal-Certified Therapists</h4>
+                        <p>Our therapists undergo rigorous royal training programs in various international massage techniques.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-clock"></i>
+                        <h4>24/7 Royal Service</h4>
+                        <p>Your royal treatment awaits anytime - we're open round the clock to serve your wellness needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-crown"></i>
+                        <h4>Luxury Products</h4>
+                        <p>We use only royal-grade, natural products that pamper your skin with premium ingredients.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Palace-Level Hygiene</h4>
+                        <p>We maintain impeccable cleanliness standards worthy of royalty for your safety and comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Royal Reviews</h2>
+                <p>What our esteemed guests say about their royal experience</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">This is truly Pune's most luxurious spa experience! The royal couples massage made our anniversary unforgettable. The therapists made us feel like royalty.</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Ananya Kapoor">
+                            <div class="author-info">
+                                <h5>Ananya Kapoor</h5>
+                                <p>Regular Guest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">As a night shift doctor, having access to this quality of spa treatments at 3am is life-changing. The royal deep tissue massage erased all my stress.</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Rajesh Verma">
+                            <div class="author-info">
+                                <h5>Dr. Rajesh Verma</h5>
+                                <p>Cardiologist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">The royal spa package was worth every rupee! Three hours of pure bliss. My skin has never felt better and I left feeling like a queen.</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priyanka Mehta">
+                            <div class="author-info">
+                                <h5>Priyanka Mehta</h5>
+                                <p>Business Executive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact The Royal Court</h2>
+                <p>Schedule your royal appointment or inquire about our services</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h3>Royal Enquiries</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Royal Address</h5>
+                                <p>City one square, Sai park town, Vikas Nagar, pune, Pimpri-Chinchwad, Maharashtra 412101</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Royal Hotline</h5>
+                                <p><a href="tel:6361295046">6361295046</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Royal Mail</h5>
+                                <p><a href="mailto:royalnightspa@gmail.com">royalnightspa@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Royal Hours</h5>
+                                <p>Open 24 Hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/xrbkdvld" method="POST">
+                            <input type="hidden" name="_subject" value="New Royal Booking Inquiry">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Royal Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="Your Royal Email" required>
+                                </div>
+                            </div>
+                            <input type="tel" name="phone" class="form-control" placeholder="Your Royal Contact Number" required>
+                            <select class="form-control" name="service" required>
+                                <option value="">Select Royal Treatment</option>
+                                <option>Royal Couples Massage</option>
+                                <option>Royal Therapeutic Massage</option>
+                                <option>Royal Spa Packages</option>
+                                <option>Royal Female Treatments</option>
+                                <option>Other Royal Inquiry</option>
+                            </select>
+                            <textarea class="form-control" name="message" rows="5" placeholder="Your Royal Message" required></textarea>
+                            <button type="submit" class="submit-btn">Request Royal Booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.2670368077746!2d73.79278731541753!3d18.616768287384868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9a41a7e0a39%3A0x3b8d3e3e3d3d3d3d!2sCity%20One%20Square!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <span class="footer-logo">Royal Night Spa</span>
+                        <p>Pune's most luxurious 24-hour wellness destination offering royal spa treatments in a palatial, hygienic environment with royal-certified therapists.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://wa.me/916361295046"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>Royal Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Royal Services</a></li>
+                            <li><a href="#about">About Our Spa</a></li>
+                            <li><a href="#features">The Royal Difference</a></li>
+                            <li><a href="#contact">Royal Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h4>Royal Treatments</h4>
+                        <ul>
+                            <li><a href="#">Royal Couples Massage</a></li>
+                            <li><a href="#">Royal Therapeutic</a></li>
+                            <li><a href="#">Royal Spa Packages</a></li>
+                            <li><a href="#">Royal Female Treatments</a></li>
+                            <li><a href="#">24/7 Availability</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Royal Night Spa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 50) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
